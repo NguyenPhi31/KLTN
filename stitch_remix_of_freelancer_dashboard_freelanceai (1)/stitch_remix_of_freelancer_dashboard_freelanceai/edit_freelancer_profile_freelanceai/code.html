@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chỉnh sửa hồ sơ cá nhân | FreelanceAI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e3eae6",
+              "on-tertiary-fixed": "#3c0800",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#eef5f1",
+              "primary-fixed-dim": "#44ddc1",
+              "on-secondary-fixed-variant": "#293ca0",
+              "on-secondary-fixed": "#00105c",
+              "on-primary-fixed-variant": "#005145",
+              "outline": "#6c7a76",
+              "on-secondary-container": "#11278e",
+              "surface-bright": "#f4fbf7",
+              "inverse-primary": "#44ddc1",
+              "primary-container": "#00bfa5",
+              "surface-container": "#e8efec",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#bac3ff",
+              "primary-fixed": "#68fadd",
+              "primary": "#006b5c",
+              "on-error-container": "#93000a",
+              "outline-variant": "#bbcac4",
+              "tertiary-fixed-dim": "#ffb4a1",
+              "surface-container-highest": "#dde4e0",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#00473c",
+              "secondary-container": "#8596ff",
+              "inverse-on-surface": "#ebf2ef",
+              "tertiary-fixed": "#ffdbd2",
+              "tertiary": "#9f4128",
+              "tertiary-container": "#fe896a",
+              "on-tertiary-container": "#74220b",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#7f2a13",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed": "#00201a",
+              "on-surface-variant": "#3c4a46",
+              "background": "#f4fbf7",
+              "surface-tint": "#006b5c",
+              "surface": "#f4fbf7",
+              "on-error": "#ffffff",
+              "surface-dim": "#d4dcd8",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#dee0ff",
+              "surface-variant": "#dde4e0",
+              "on-surface": "#161d1b",
+              "on-background": "#161d1b",
+              "secondary": "#4355b9",
+              "inverse-surface": "#2b3230"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-teal-700">FreelanceAI</span>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-500 hover:text-teal-600 transition-all font-medium" href="#">Dashboard</a>
+<a class="text-teal-700 font-bold" href="#">Profile</a>
+<a class="text-slate-500 hover:text-teal-600 transition-all font-medium" href="#">Learning</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-500 p-2 hover:bg-teal-50/50 rounded-full cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-slate-500 p-2 hover:bg-teal-50/50 rounded-full cursor-pointer">settings</span>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-xl transition-all active:scale-95">
+                Lưu thay đổi
+            </button>
+</div>
+</nav>
+<!-- Sidebar (Suppressed on sub-page context as per mandate, but included for Shell Layout reference if needed - Hidden for Profile Edit) -->
+<main class="pt-24 pb-20 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl md:text-5xl font-black tracking-tight text-on-surface mb-2">Chỉnh sửa hồ sơ cá nhân</h1>
+<p class="text-on-surface-variant body-lg">Cập nhật thông tin của bạn để tăng khả năng kết nối với nhà tuyển dụng bằng AI.</p>
+</div>
+<div class="flex gap-4">
+<a class="text-primary font-bold hover:underline flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">visibility</span>
+                    Xem trước hồ sơ công khai
+                </a>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Core Identity -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Hero Section Card -->
+<section class="bg-surface-container-lowest rounded-lg p-8 shadow-sm transition-all hover:bg-surface-bright border border-transparent hover:border-outline-variant/15">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="relative group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-surface-container-high overflow-hidden border-4 border-surface shadow-md">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Portrait of a professional freelancer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-MhNNQulRCx2S2CK32812Y5J00-GpZ-_yFYLI8wcSFTylibabGaxA0nyg6C9pHHyWMdx2xJN_WOklnvipGC9dIJm6CB6Fq4vU_5NoTqP5xxU3eeFBUmApcd2Ghrb6zd-esszLe7_KSIzu2DfwK3G-qfSg8frPktaYEPRv2Ck6bJiExHutJnr9nx3mWRpYauqezlKBuhdthZihFhtYmi6KiVDwya8qP_JcLPlYUuR7X_tjmLVD3m4-oFH_Qsra9xYY1gH2ujld65W_"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-3xl">photo_camera</span>
+</div>
+</div>
+<div class="flex-1 w-full space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-widest uppercase text-on-surface-variant px-1">Họ và tên</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container outline-none transition-all font-medium" placeholder="Nhập tên của bạn" type="text" value="Alex Nguyễn"/>
+</div>
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-widest uppercase text-on-surface-variant px-1">Vị trí chuyên môn</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container outline-none transition-all font-medium" placeholder="VD: UI/UX Designer" type="text" value="Full-stack Developer | React &amp; Node.js"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-widest uppercase text-on-surface-variant px-1">Mức lương theo giờ ($/hr)</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">$</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pl-8 pr-4 py-3 focus:ring-2 focus:ring-primary-container outline-none transition-all font-medium" type="number" value="45"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[0.6875rem] font-bold tracking-widest uppercase text-on-surface-variant px-1">Vị trí địa lý</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container outline-none transition-all font-medium appearance-none">
+<option>TP. Hồ Chí Minh, Việt Nam</option>
+<option>Hà Nội, Việt Nam</option>
+<option>Đà Nẵng, Việt Nam</option>
+<option>Làm việc từ xa</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bio Section -->
+<section class="bg-surface-container-lowest rounded-lg p-8 shadow-sm">
+<div class="mb-6 flex items-center justify-between">
+<h2 class="text-xl font-extrabold text-on-surface tracking-tight">Giới thiệu bản thân</h2>
+<span class="text-primary text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">auto_awesome</span> AI Hỗ trợ viết
+                        </span>
+</div>
+<div class="w-full bg-surface-container-low rounded-xl p-4 min-h-[200px] border border-transparent focus-within:border-primary-container transition-all">
+<div class="flex gap-4 border-b border-outline-variant/20 pb-2 mb-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">format_bold</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">format_italic</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">format_list_bulleted</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">link</span>
+</div>
+<textarea class="w-full bg-transparent border-none focus:ring-0 resize-none h-40 font-body leading-relaxed text-on-surface-variant" placeholder="Hãy kể về kinh nghiệm và những giá trị bạn mang lại...">Tôi là một nhà phát triển Full-stack với hơn 5 năm kinh nghiệm trong việc xây dựng các ứng dụng web quy mô lớn. Tôi đam mê việc tạo ra các giao diện người dùng mượt mà và hệ thống backend tối ưu. Luôn sẵn sàng học hỏi các công nghệ AI mới nhất để áp dụng vào sản phẩm thực tế.</textarea>
+</div>
+</section>
+<!-- Experience & Education -->
+<section class="space-y-6">
+<div class="flex items-center justify-between px-2">
+<h2 class="text-xl font-extrabold text-on-surface tracking-tight">Kinh nghiệm &amp; Học vấn</h2>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 bg-surface-container-high text-on-surface px-4 py-2 rounded-full text-sm font-bold hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined text-sm">add</span> Thêm học vấn
+                            </button>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-full text-sm font-bold hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-sm">add</span> Thêm kinh nghiệm
+                            </button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Experience Item -->
+<div class="bg-surface-container-lowest rounded-lg p-6 relative group border-l-4 border-primary shadow-sm">
+<div class="flex justify-between mb-4">
+<div>
+<h3 class="font-bold text-lg text-on-surface">Senior Web Developer</h3>
+<p class="text-primary font-medium">TechFlow Solutions • Toàn thời gian</p>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">Tháng 6 2021 - Hiện tại</p>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Dẫn dắt đội ngũ 5 người phát triển nền tảng SaaS. Tối ưu hóa hiệu suất frontend tăng 40% bằng cách áp dụng Next.js và Micro-frontend architecture.</p>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<span class="material-symbols-outlined p-2 hover:bg-surface-container text-on-surface-variant cursor-pointer rounded-full">edit</span>
+<span class="material-symbols-outlined p-2 hover:bg-error-container/20 text-error cursor-pointer rounded-full">delete</span>
+</div>
+</div>
+<!-- Education Item -->
+<div class="bg-surface-container-lowest rounded-lg p-6 relative group border-l-4 border-secondary shadow-sm">
+<div class="flex justify-between mb-4">
+<div>
+<h3 class="font-bold text-lg text-on-surface">Thạc sĩ Khoa học Máy tính</h3>
+<p class="text-secondary font-medium">Đại học Bách Khoa TP.HCM</p>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">2018 - 2020</p>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Chuyên ngành Hệ thống thông tin và Trí tuệ nhân tạo. Tốt nghiệp loại Ưu.</p>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<span class="material-symbols-outlined p-2 hover:bg-surface-container text-on-surface-variant cursor-pointer rounded-full">edit</span>
+<span class="material-symbols-outlined p-2 hover:bg-error-container/20 text-error cursor-pointer rounded-full">delete</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Skills, Portfolio, CV -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Skills Section -->
+<section class="bg-surface-container-lowest rounded-lg p-8 shadow-sm">
+<h2 class="text-lg font-extrabold text-on-surface tracking-tight mb-6">Kỹ năng chuyên môn</h2>
+<div class="flex flex-wrap gap-2 mb-6">
+<div class="flex items-center gap-1 bg-primary-container/10 text-primary-fixed-variant px-3 py-1.5 rounded-full text-xs font-bold border border-primary-container/20">
+                            React <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-1 bg-primary-container/10 text-primary-fixed-variant px-3 py-1.5 rounded-full text-xs font-bold border border-primary-container/20">
+                            Node.js <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-1 bg-primary-container/10 text-primary-fixed-variant px-3 py-1.5 rounded-full text-xs font-bold border border-primary-container/20">
+                            TypeScript <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-1 bg-primary-container/10 text-primary-fixed-variant px-3 py-1.5 rounded-full text-xs font-bold border border-primary-container/20">
+                            UI/UX <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary-container transition-all" placeholder="Tìm kiếm kỹ năng..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+</div>
+<div class="bg-surface-container rounded-xl p-4 border border-primary-container/30">
+<p class="text-[0.625rem] font-black uppercase text-primary mb-3 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span> Gợi ý bởi AI
+                            </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-white px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-primary-container hover:text-white transition-colors">Python</span>
+<span class="bg-white px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-primary-container hover:text-white transition-colors">Docker</span>
+<span class="bg-white px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-primary-container hover:text-white transition-colors">AWS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Grid -->
+<section class="bg-surface-container-lowest rounded-lg p-8 shadow-sm">
+<h2 class="text-lg font-extrabold text-on-surface tracking-tight mb-6">Dự án Portfolio</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden group relative cursor-pointer border border-transparent hover:border-primary/20 transition-all">
+<img alt="Portfolio 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Screenshot of a modern web dashboard design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBzvhGhpsXQ_T_PIyHGCyZ-z9TzwLLNOprBrhQItSaiXdxlAEIV0YY9ZzVsP-xPN2gnBFa4X_yTKL_gtruJdpFOYNoLWmCQh0x91Y1acA-xGrF-aUuwUpnLPw7LaxIroKBu3eopGcfZjwSu-j1K87ZHbxsRo5kzb_ymXOdaSra0U4NWmkOU53ZbSqPN5vTTqEZZYxnx3y6A60XlFE07QYZsOQMY3abBH88Zx_7bKXWFsdMuSMJGTOmJZWyoU3pHHSOMnBuXsYts80d"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+<p class="text-white text-[10px] font-bold">E-commerce App</p>
+</div>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden group relative cursor-pointer border border-transparent hover:border-primary/20 transition-all">
+<img alt="Portfolio 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Financial data visualization app interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwOXqawkvJftIWJ9KFOqfxUiIDZadyweP1ePcNuba68I6kYmAgYfB_RQNNRXU1KEEcgJroMv7SGly2S7byyTJqk9ah11dYG7wkgze4vyhJv0sZuxr6UOuaORMQssdoPlcezYBDOo8grjEqZwOVEM7d5u67cRw91rTltRC6coCuVoP9LoIkFfcNRhO3Dt23SPq4QBblSlkdrq3kb91mtcOUvRqigSRgRF3mSU4gC1Ty6Q512iTizYeSlQZTFs6m5jbmDLEyaPBtOdS5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+<p class="text-white text-[10px] font-bold">Fintech Dash</p>
+</div>
+</div>
+<div class="aspect-square rounded-xl border-2 border-dashed border-outline-variant flex flex-col items-center justify-center gap-2 text-on-surface-variant hover:bg-surface-container-high hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-3xl">add_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Thêm mới</span>
+</div>
+</div>
+</section>
+<!-- CV Section -->
+<section class="bg-gradient-to-br from-secondary/5 to-primary/5 rounded-lg p-8 border border-white/50 shadow-sm relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-lg font-extrabold text-on-surface tracking-tight mb-4">CV &amp; Hồ sơ đính kèm</h2>
+<div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 flex items-center gap-4 mb-4 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-error">picture_as_pdf</span>
+<div class="flex-1 overflow-hidden">
+<p class="text-sm font-bold truncate">Alex_Nguyen_CV_2024.pdf</p>
+<p class="text-[10px] text-on-surface-variant">Đã tải lên 2 ngày trước • 1.2 MB</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-error">delete</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-white border border-outline-variant px-4 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">upload_file</span> Tải CV mới
+                            </button>
+<button class="w-full bg-secondary-container text-on-secondary-container px-4 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 hover:shadow-lg transition-all">
+<span class="material-symbols-outlined">psychology</span> Phân tích lại bằng AI
+                            </button>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/10 blur-3xl rounded-full"></div>
+</section>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-outline-variant/10 px-8 py-4 flex items-center justify-center md:justify-end gap-6 z-40">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors text-sm" href="#">Hủy bỏ thay đổi</a>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-4 rounded-full font-black text-lg shadow-[0_10px_30px_rgba(0,107,92,0.3)] hover:shadow-[0_15px_40px_rgba(0,107,92,0.4)] hover:-translate-y-1 transition-all active:translate-y-0 active:scale-95">
+                Lưu hồ sơ ngay
+            </button>
+</div>
+</main>
+</body></html>

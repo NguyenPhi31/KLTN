@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Đăng ký | FreelanceAI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#eef5f1",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#293ca0",
+              "on-primary-fixed-variant": "#005145",
+              "primary": "#006b5c",
+              "outline": "#6c7a76",
+              "outline-variant": "#bbcac4",
+              "primary-container": "#00bfa5",
+              "on-surface": "#161d1b",
+              "background": "#f4fbf7",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed": "#00105c",
+              "secondary-container": "#8596ff",
+              "on-tertiary-fixed": "#3c0800",
+              "on-tertiary-container": "#74220b",
+              "tertiary-fixed": "#ffdbd2",
+              "on-tertiary-fixed-variant": "#7f2a13",
+              "inverse-on-surface": "#ebf2ef",
+              "inverse-surface": "#2b3230",
+              "on-primary-container": "#00473c",
+              "tertiary-fixed-dim": "#ffb4a1",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#9f4128",
+              "primary-fixed": "#68fadd",
+              "primary-fixed-dim": "#44ddc1",
+              "on-background": "#161d1b",
+              "tertiary-container": "#fe896a",
+              "on-primary-fixed": "#00201a",
+              "secondary-fixed-dim": "#bac3ff",
+              "secondary-fixed": "#dee0ff",
+              "on-secondary-container": "#11278e",
+              "surface-dim": "#d4dcd8",
+              "surface": "#f4fbf7",
+              "on-error-container": "#93000a",
+              "surface-bright": "#f4fbf7",
+              "surface-container-high": "#e3eae6",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#006b5c",
+              "surface-container-highest": "#dde4e0",
+              "on-surface-variant": "#3c4a46",
+              "secondary": "#4355b9",
+              "inverse-primary": "#44ddc1",
+              "error-container": "#ffdad6",
+              "surface-container": "#e8efec",
+              "surface-variant": "#dde4e0",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-color: #f4fbf7;
+            background-image: radial-gradient(at 0% 0%, hsla(171, 100%, 95%, 1) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, hsla(231, 100%, 95%, 1) 0, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col font-body text-on-background selection:bg-primary-container/30">
+<!-- Top Navigation (Shell suppressed for transactional page, but Logo remains for identity) -->
+<header class="fixed top-0 w-full z-50 px-8 h-20 flex justify-center items-center">
+<div class="text-2xl font-black text-primary tracking-tighter flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+            FreelanceAI
+        </div>
+</header>
+<main class="flex-grow flex items-center justify-center px-4 py-24">
+<div class="w-full max-w-[450px] space-y-8">
+<!-- Branding & Title -->
+<div class="text-center space-y-3">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface">Đăng ký ngay</h1>
+<p class="text-on-surface-variant leading-relaxed text-sm px-4">
+                    Chọn vai trò của bạn để bắt đầu kết nối việc làm freelance với AI phân tích kỹ năng
+                </p>
+</div>
+<!-- Registration Card -->
+<div class="glass-card rounded-lg p-8 shadow-sm ring-1 ring-outline-variant/10">
+<form class="space-y-6">
+<!-- Role Selection -->
+<div class="grid grid-cols-2 gap-3 p-1 bg-surface-container rounded-full mb-8">
+<button class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-full text-sm font-semibold transition-all duration-300 bg-primary-container text-on-primary-container shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">person</span>
+                            Freelancer
+                        </button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-full text-sm font-semibold transition-all duration-300 text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-lg">business_center</span>
+                            Client
+                        </button>
+</div>
+<!-- Input Group: Full Name -->
+<div class="space-y-2">
+<label class="block text-xs font-bold tracking-widest text-on-surface-variant uppercase ml-1">Họ và tên</label>
+<div class="relative group">
+<input class="w-full h-14 px-5 pt-1 rounded-2xl bg-surface-container-lowest border-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" placeholder="Nguyễn Văn A" type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-4 text-outline-variant group-focus-within:text-primary transition-colors">badge</span>
+</div>
+</div>
+<!-- Input Group: Email -->
+<div class="space-y-2">
+<label class="block text-xs font-bold tracking-widest text-on-surface-variant uppercase ml-1">Email</label>
+<div class="relative group">
+<input class="w-full h-14 px-5 pt-1 rounded-2xl bg-surface-container-lowest border-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" placeholder="example@email.com" type="email"/>
+<span class="material-symbols-outlined absolute right-4 top-4 text-outline-variant group-focus-within:text-primary transition-colors">mail</span>
+</div>
+</div>
+<!-- Input Group: Password -->
+<div class="space-y-2">
+<label class="block text-xs font-bold tracking-widest text-on-surface-variant uppercase ml-1">Mật khẩu</label>
+<div class="relative group">
+<input class="w-full h-14 px-5 pt-1 rounded-2xl bg-surface-container-lowest border-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-4 text-outline-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Input Group: Confirm Password -->
+<div class="space-y-2">
+<label class="block text-xs font-bold tracking-widest text-on-surface-variant uppercase ml-1">Xác nhận mật khẩu</label>
+<div class="relative group">
+<input class="w-full h-14 px-5 pt-1 rounded-2xl bg-surface-container-lowest border-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" placeholder="••••••••" type="password"/>
+<span class="material-symbols-outlined absolute right-4 top-4 text-outline-variant group-focus-within:text-primary transition-colors">lock_reset</span>
+</div>
+</div>
+<!-- Terms Checkbox -->
+<label class="flex items-start gap-3 cursor-pointer group">
+<div class="relative flex items-center mt-1">
+<input class="peer h-5 w-5 rounded-md border-outline-variant bg-surface-container-lowest text-primary focus:ring-primary/20 transition-all cursor-pointer" required="" type="checkbox"/>
+</div>
+<span class="text-sm text-on-surface-variant leading-tight select-none">
+                            Tôi đồng ý với <a class="text-primary font-medium hover:underline" href="#">Điều khoản dịch vụ</a> và <a class="text-primary font-medium hover:underline" href="#">Chính sách bảo mật</a>
+</span>
+</label>
+<!-- Submit Button -->
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-primary to-primary-container text-white font-bold text-lg shadow-md hover:shadow-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2" type="submit">
+                        Đăng ký
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- Divider -->
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/30"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase tracking-widest">
+<span class="bg-white px-4 text-on-surface-variant/60 font-medium">hoặc</span>
+</div>
+</div>
+<!-- Social Login -->
+<button class="w-full h-14 rounded-full border border-outline-variant bg-white text-on-surface font-semibold flex items-center justify-center gap-3 hover:bg-surface-container-low transition-colors duration-300" type="button">
+<img alt="Google Logo" class="w-6 h-6" data-alt="Google logo icon for social login" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwFIBCDnzh9u4T_Wy2_WJ3DmSeqJ0dqQ0a97mEvGqyaOmo01Lg8ZzpXLikEcN4-eTisOmcU5KtPcNXwZaYXbgIXQSoI1BXY8De98c69dEFKsoKb1oGAgiVzRmUQfIBJ_3kLnI-7H6RlwckGVTgY0yGczYmH0JbmOJ2I9n_R5JRTkH3JADJ6M04C_JpepEFwo7fEBOsZEL9AHvLxuzBHo7HJEIushVVXY6iErhmlYNCgnckWA7KTXFfM_WpL7HTNfqoDJar4ZMeFpvc"/>
+                        Tiếp tục với Google
+                    </button>
+</form>
+</div>
+<!-- Bottom Actions -->
+<div class="text-center space-y-8">
+<p class="text-on-surface-variant font-medium">
+                    Đã có tài khoản? 
+                    <a class="text-primary font-bold hover:underline ml-1" href="#">Đăng nhập</a>
+</p>
+<!-- AI Badge -->
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary-fixed-dim text-xs font-bold tracking-wide">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    POWERED BY AI – MATCHING KỸ NĂNG CÁ NHÂN HÓA
+                </div>
+</div>
+</div>
+</main>
+<!-- Footer (Minimal for Focused Journey) -->
+<footer class="w-full py-8 px-8 flex flex-col md:flex-row justify-center items-center gap-6 opacity-60">
+<p class="text-sm font-inter tracking-wide text-slate-500">© 2024 FreelanceAI. The Intelligent Atmosphere.</p>
+<div class="flex gap-6">
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</footer>
+<!-- Visual Decorative Elements (Asymmetric Layout Bleeds) -->
+<div class="fixed top-1/4 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="fixed bottom-1/4 -left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+</body></html>

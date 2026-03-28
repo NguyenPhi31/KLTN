@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#00bfa5",
+              "on-primary-fixed": "#00201a",
+              "outline": "#6c7a76",
+              "tertiary-fixed-dim": "#ffb4a1",
+              "surface-container-low": "#eef5f1",
+              "surface-container-highest": "#dde4e0",
+              "surface-bright": "#f4fbf7",
+              "on-surface": "#161d1b",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#161d1b",
+              "inverse-primary": "#44ddc1",
+              "primary-fixed": "#68fadd",
+              "on-primary-container": "#00473c",
+              "tertiary": "#9f4128",
+              "on-tertiary-fixed": "#3c0800",
+              "secondary": "#4355b9",
+              "on-surface-variant": "#3c4a46",
+              "surface-dim": "#d4dcd8",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#fe896a",
+              "on-error-container": "#93000a",
+              "surface-variant": "#dde4e0",
+              "secondary-fixed-dim": "#bac3ff",
+              "primary": "#006b5c",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#005145",
+              "background": "#f4fbf7",
+              "surface-container-high": "#e3eae6",
+              "secondary-fixed": "#dee0ff",
+              "on-secondary-fixed": "#00105c",
+              "on-secondary-container": "#11278e",
+              "on-primary": "#ffffff",
+              "surface": "#f4fbf7",
+              "secondary-container": "#8596ff",
+              "inverse-on-surface": "#ebf2ef",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2b3230",
+              "on-tertiary-fixed-variant": "#7f2a13",
+              "on-tertiary-container": "#74220b",
+              "outline-variant": "#bbcac4",
+              "primary-fixed-dim": "#44ddc1",
+              "tertiary-fixed": "#ffdbd2",
+              "surface-tint": "#006b5c",
+              "on-secondary-fixed-variant": "#293ca0",
+              "surface-container": "#e8efec"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #dde4e0; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #bbcac4; }
+        .typing-dot { animation: blink 1.4s infinite both; }
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes blink { 0%, 80%, 100% { opacity: 0; } 40% { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar (Shared Component Execution) -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md flex items-center justify-between px-6 py-3 shadow-[0_4px_20px_0_rgba(0,191,165,0.06)] font-['Inter'] antialiased">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-teal-600 dark:text-teal-400">FreelanceAI</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-500 transition-colors" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-500 transition-colors" href="#">Projects</a>
+<a class="text-teal-600 dark:text-teal-400 font-semibold border-b-2 border-teal-500" href="#">Messages</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-outline text-lg mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Search tasks..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="hover:bg-teal-50/50 dark:hover:bg-teal-900/20 transition-all p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-500">notifications</span>
+</button>
+<button class="hover:bg-teal-50/50 dark:hover:bg-teal-900/20 transition-all p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-500">settings</span>
+</button>
+<div class="h-8 w-px bg-outline-variant/30 mx-1"></div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span>
+                    New Chat
+                </button>
+<img alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-primary-container/20" data-alt="Professional user profile avatar headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH8pLdweARRtW75jcPEL9fOIUoI-Qwocc9v3PCMRV8rClPFCqCWgnvy8UrOLeTVQ8Q6kwESJ866UYCBlD8l-KzEnrqpE6-OPRzGBMp8LVBPmzG97gphrSX8ZmHG1UV2QbJSdNxmBO9681-bY10PGUi2ILnkvIBgf_QEmhX8yomXWgZy2hCoAc-9lUyDhL9Q-KxcN4zvcb3Vh--1xxaXuNnRZufrNEOo_0FIyo2z_aDFSjGKch6dENfwoR1vFVg1DUTziex3d-5Td2Z"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Shared Component Execution) -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-40 bg-slate-50 dark:bg-slate-950 flex flex-col p-4 gap-2 pt-20 bg-slate-100/50 dark:bg-slate-900/50">
+<div class="mb-6 px-4">
+<h2 class="text-lg font-black text-teal-700 dark:text-teal-300">Intelligent Atmosphere</h2>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-teal-600 dark:text-teal-400 rounded-xl shadow-sm cursor-pointer hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined" data-weight="fill">history</span>
+<span class="font-medium text-sm">Chat History</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl cursor-pointer hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">description</span>
+<span class="font-medium text-sm">CV Tips</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl cursor-pointer hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">school</span>
+<span class="font-medium text-sm">Learning Paths</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl cursor-pointer hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-medium text-sm">Saved Jobs</span>
+</div>
+</div>
+<div class="mt-auto border-t border-outline-variant/10 pt-4 flex flex-col gap-1">
+<button class="w-full mb-4 bg-gradient-to-br from-primary to-primary-container text-white py-3 rounded-xl font-bold text-xs tracking-wider uppercase active:scale-[0.98] transition-all shadow-md shadow-primary/20">
+                Upgrade to Pro
+            </button>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-xl cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-lg">help</span>
+<span class="font-medium text-sm">Help Center</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container/20 rounded-xl cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span class="font-medium text-sm">Log Out</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 mr-80 pt-16 h-screen flex flex-col relative">
+<!-- Header Info -->
+<div class="px-8 py-6 flex items-center justify-between bg-surface-bright/50 backdrop-blur-sm sticky top-16 z-10">
+<div>
+<h1 class="text-xl font-bold text-on-surface">Chat với AI Assistant</h1>
+<p class="text-sm text-on-surface-variant/70">Phân tích sự nghiệp &amp; Tối ưu hồ sơ</p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container/10 rounded-full">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<span class="text-xs font-semibold text-on-primary-container">AI Online</span>
+</div>
+</div>
+<!-- Chat History -->
+<div class="flex-1 overflow-y-auto px-8 pb-32 space-y-8 scroll-smooth pt-4">
+<!-- AI Message -->
+<div class="flex items-start gap-4 max-w-3xl">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-lg">smart_toy</span>
+</div>
+<div class="bg-surface-container-high/60 backdrop-blur-sm p-5 rounded-2xl rounded-tl-none shadow-sm border border-outline-variant/10">
+<p class="text-on-surface leading-relaxed">Xin chào! Tôi là AI Assistant của FreelanceAI. Tôi có thể giúp bạn tối ưu CV, gợi ý lộ trình học tập hoặc phân tích mô tả công việc. Bạn muốn bắt đầu từ đâu?</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex items-start justify-end gap-4">
+<div class="bg-primary-container text-white p-5 rounded-3xl rounded-tr-none shadow-lg shadow-primary-container/10 max-w-xl">
+<p class="leading-relaxed">Tôi muốn cải thiện CV của mình để ứng tuyển vào vị trí Senior React Developer. Bạn có thể xem qua file PDF tôi vừa tải lên không?</p>
+</div>
+<img alt="Me" class="w-10 h-10 rounded-full border-2 border-primary-container/30 shrink-0" data-alt="User avatar thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt4tN2fKEy70QYm7l6zq-ezVUQiZyXsF9zrPYvio18ObSPDYzSFnt-wIiiLPP480WP50WdWgAvsAqF4za1eDs62oprO_r21mb5lPViBXIjn25WG4MFP61Aj0aInt5TUBmiPc_u0GZ1z_6StcGL2RbLUSdl1g1nyVf777V65o4ZaC1KtnbOrkvp11uc0XIvBCaMCV52D0_uDcEDPsHJy08iFY4TyHA60-qo9BEJ_h3pgrLSGq25xQFBHc3IMo8Ep0DUe6btHRxc4jH6"/>
+</div>
+<!-- AI Message (Markdown Example) -->
+<div class="flex items-start gap-4 max-w-3xl">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-lg">smart_toy</span>
+</div>
+<div class="bg-surface-container-high/60 backdrop-blur-sm p-6 rounded-2xl rounded-tl-none shadow-sm border border-outline-variant/10 w-full">
+<p class="font-semibold text-lg mb-3">Tôi đã nhận được CV của bạn. Đây là một vài nhận xét nhanh:</p>
+<ul class="space-y-3 mb-4">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm mt-1">check_circle</span>
+<span><strong>Kỹ năng kỹ thuật:</strong> Bạn có nền tảng tốt về React và TypeScript.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-sm mt-1">info</span>
+<span><strong>Dự án:</strong> Cần làm nổi bật các con số (KPIs) thay vì chỉ liệt kê task.</span>
+</li>
+</ul>
+<div class="bg-inverse-surface text-inverse-on-surface p-4 rounded-xl font-mono text-xs overflow-x-auto border border-outline/20">
+<code>// Gợi ý cấu trúc cho kinh nghiệm dự án
+{
+  "project": "E-commerce Platform Optimization",
+  "result": "Improved LCP by 40% using Code Splitting &amp; SSR",
+  "tools": ["Next.js", "Redis", "AWS"]
+}</code>
+</div>
+</div>
+</div>
+<!-- Typing Indicator -->
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-lg">smart_toy</span>
+</div>
+<div class="bg-surface-container-high/40 p-4 rounded-2xl rounded-tl-none flex gap-1 items-center">
+<div class="w-1.5 h-1.5 bg-primary-container/60 rounded-full typing-dot"></div>
+<div class="w-1.5 h-1.5 bg-primary-container/60 rounded-full typing-dot"></div>
+<div class="w-1.5 h-1.5 bg-primary-container/60 rounded-full typing-dot"></div>
+</div>
+</div>
+</div>
+<!-- Input Section -->
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-background via-background to-transparent pointer-events-none">
+<div class="max-w-4xl mx-auto flex items-end gap-3 pointer-events-auto bg-surface-container-lowest p-3 rounded-3xl shadow-2xl shadow-primary-container/5 border border-outline-variant/10">
+<button class="p-3 hover:bg-surface-container-low rounded-full transition-colors text-outline">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 py-3 text-on-surface resize-none max-h-40 placeholder:text-outline-variant" placeholder="Hỏi tôi bất cứ điều gì..." rows="1"></textarea>
+<button class="bg-primary-container text-white p-3 rounded-full hover:scale-105 active:scale-95 transition-all shadow-md">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Right Sidebar -->
+<aside class="w-80 h-screen fixed right-0 top-0 pt-20 pb-8 px-6 bg-surface-container-low/30 border-l border-outline-variant/10 overflow-y-auto">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-bold text-on-surface">Suggested Questions</h3>
+<span class="material-symbols-outlined text-outline-variant text-sm">auto_awesome</span>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="group p-5 bg-white dark:bg-slate-800 rounded-2xl border border-outline-variant/10 hover:border-primary-container/40 transition-all cursor-pointer shadow-sm hover:shadow-md active:translate-y-0.5">
+<div class="w-10 h-10 rounded-xl bg-primary-container/10 flex items-center justify-center mb-3 group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-primary-container group-hover:text-white">edit_document</span>
+</div>
+<h4 class="font-semibold text-sm mb-1">Gợi ý cải thiện CV</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Phân tích sâu và tối ưu hóa từ khóa cho hồ sơ của bạn.</p>
+</div>
+<div class="group p-5 bg-white dark:bg-slate-800 rounded-2xl border border-outline-variant/10 hover:border-primary-container/40 transition-all cursor-pointer shadow-sm hover:shadow-md active:translate-y-0.5">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/10 flex items-center justify-center mb-3 group-hover:bg-secondary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-secondary-container group-hover:text-white">route</span>
+</div>
+<h4 class="font-semibold text-sm mb-1">Lộ trình học React</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Các kỹ năng cần thiết để trở thành Expert.</p>
+</div>
+<div class="group p-5 bg-white dark:bg-slate-800 rounded-2xl border border-outline-variant/10 hover:border-primary-container/40 transition-all cursor-pointer shadow-sm hover:shadow-md active:translate-y-0.5">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/10 flex items-center justify-center mb-3 group-hover:bg-tertiary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-tertiary-container group-hover:text-white">work_history</span>
+</div>
+<h4 class="font-semibold text-sm mb-1">Phân tích job này</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Đánh giá độ phù hợp của bạn với JD cụ thể.</p>
+</div>
+<div class="group p-5 bg-white dark:bg-slate-800 rounded-2xl border border-outline-variant/10 hover:border-primary-container/40 transition-all cursor-pointer shadow-sm hover:shadow-md active:translate-y-0.5">
+<div class="w-10 h-10 rounded-xl bg-primary-container/10 flex items-center justify-center mb-3 group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-primary-container group-hover:text-white">payments</span>
+</div>
+<h4 class="font-semibold text-sm mb-1">Lời khuyên đàm phán lương</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Bí quyết để đạt được mức thu nhập mong muốn.</p>
+</div>
+</div>
+<div class="mt-12">
+<div class="bg-gradient-to-br from-primary-container/20 to-secondary-container/20 p-6 rounded-3xl border border-white">
+<h4 class="font-bold text-sm mb-2">AI Power Insight</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">Bạn đang có 85% tỉ lệ khớp với các vị trí Senior React tại Singapore.</p>
+<button class="text-xs font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                    Xem chi tiết phân tích <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+</aside>
+</body></html>

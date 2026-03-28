@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumina AI - Freelancers phù hợp nhất</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2b3230",
+              "surface-variant": "#dde4e0",
+              "primary-container": "#00bfa5",
+              "outline": "#6c7a76",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#11278e",
+              "secondary-fixed": "#dee0ff",
+              "surface-container-highest": "#dde4e0",
+              "on-tertiary-fixed": "#3c0800",
+              "tertiary-container": "#fe896a",
+              "surface-container-high": "#e3eae6",
+              "surface-bright": "#f4fbf7",
+              "outline-variant": "#bbcac4",
+              "background": "#f4fbf7",
+              "error-container": "#ffdad6",
+              "surface-container": "#e8efec",
+              "primary": "#006b5c",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#bac3ff",
+              "on-surface-variant": "#3c4a46",
+              "on-primary-fixed-variant": "#005145",
+              "on-surface": "#161d1b",
+              "inverse-on-surface": "#ebf2ef",
+              "inverse-primary": "#44ddc1",
+              "surface-tint": "#006b5c",
+              "on-primary-fixed": "#00201a",
+              "on-secondary-fixed-variant": "#293ca0",
+              "surface-dim": "#d4dcd8",
+              "secondary": "#4355b9",
+              "surface": "#f4fbf7",
+              "on-tertiary-fixed-variant": "#7f2a13",
+              "primary-fixed-dim": "#44ddc1",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#74220b",
+              "primary-fixed": "#68fadd",
+              "secondary-container": "#8596ff",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#ffb4a1",
+              "surface-container-low": "#eef5f1",
+              "on-primary": "#ffffff",
+              "tertiary": "#9f4128",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#00105c",
+              "tertiary-fixed": "#ffdbd2",
+              "on-primary-container": "#00473c",
+              "on-background": "#161d1b"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .teal-gradient {
+            background: linear-gradient(135deg, #006b5c 0%, #00bfa5 100%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 flex items-center justify-between px-8 py-3 w-full max-w-full glass-nav shadow-none font-['Inter'] antialiased">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-teal-600">Lumina AI</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-slate-600 hover:text-teal-500 transition-colors" href="#">Talent</a>
+<a class="text-teal-600 font-semibold border-b-2 border-teal-500" href="#">Projects</a>
+<a class="text-slate-600 hover:text-teal-500 transition-colors" href="#">Messages</a>
+<a class="text-slate-600 hover:text-teal-500 transition-colors" href="#">Analytics</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-slate-50/50 p-2 rounded-full transition-all active:scale-95">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-slate-50/50 p-2 rounded-full transition-all active:scale-95">settings</button>
+<div class="h-8 w-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Client profile avatar" class="w-full h-full object-cover" data-alt="Corporate professional headshot for client profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9RC0nSww6Tc48YWzjUoAhVdSCSOuQjjx7JZQM-TbInT1xtKnuH2PgEDUD6AV-zo1W4accSAHBuWnOHeoJHwwaOcRDbbg18-I6cQU0k_fTkskt9uscLckhM2wmguPO_Ce1rZqjMXOQ0VbeUm5W6fpLNFH3yKZAUFVD8IuBgXeJ-dB4zflxhIPUqzVedUFKHL7Aphg3zsDpqJ8mOrqt3DFC6ebvCiZoiAnZLVcGYYbDeCgKx3np5UzWkMQFvgzhS2DrLodqUM1zXt1c"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-medium active:scale-95 transition-all teal-gradient">Post a Job</button>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-12 max-w-[1600px] mx-auto flex gap-10">
+<!-- Left Sidebar: AI Matcher Info -->
+<aside class="hidden lg:flex flex-col h-screen sticky top-24 w-64 font-['Inter'] text-sm tracking-wide">
+<div class="mb-8">
+<h2 class="text-lg font-bold text-slate-900">AI Matcher</h2>
+<p class="text-on-surface-variant text-xs mt-1">Intelligent Insights</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-teal-700 bg-teal-50 rounded-r-full border-l-4 border-teal-500 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    Recommended
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-100 rounded-r-full hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+                    Saved
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-100 rounded-r-full hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">history</span>
+                    Previous
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-100 rounded-r-full hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">mail</span>
+                    Invite-only
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-100 rounded-r-full hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">verified</span>
+                    Top Rated
+                </a>
+</nav>
+<div class="mt-auto mb-32 p-6 bg-surface-container-low rounded-lg">
+<h4 class="font-bold text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">lightbulb</span>
+                    AI Insight
+                </h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                    Based on your "Senior React Developer" posting, we found 24 experts matching 90%+ of your technical stack.
+                </p>
+<button class="mt-4 w-full py-2 text-xs font-bold uppercase tracking-widest text-primary border border-primary/20 rounded-full hover:bg-primary/5 transition-colors">
+                    Refine Search
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-1">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<h1 class="text-[2.5rem] font-bold tracking-tight leading-tight text-on-surface mb-2">Freelancers phù hợp nhất</h1>
+<p class="text-on-surface-variant text-lg">Senior React Developer • Đã tìm thấy 148 ứng viên</p>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-high text-on-surface rounded-full font-semibold hover:bg-surface-variant transition-all active:scale-95">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Quay lại công việc
+                </button>
+</div>
+<!-- Filter Bar -->
+<div class="bg-surface-container-low p-4 rounded-full flex items-center justify-between gap-6 mb-12 shadow-sm">
+<div class="flex items-center gap-4 pl-4">
+<span class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">Sắp xếp:</span>
+<button class="flex items-center gap-1 text-sm font-semibold text-primary">Match Score <span class="material-symbols-outlined text-sm">south</span></button>
+<button class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Hourly rate</button>
+<button class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Experience</button>
+</div>
+<div class="h-6 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-3 flex-1">
+<span class="material-symbols-outlined text-on-surface-variant">filter_list</span>
+<div class="flex gap-2">
+<span class="px-4 py-1.5 bg-primary text-on-primary rounded-full text-sm font-medium">React</span>
+<span class="px-4 py-1.5 bg-surface-container-lowest border border-outline-variant/30 rounded-full text-sm font-medium">TypeScript</span>
+<span class="px-4 py-1.5 bg-surface-container-lowest border border-outline-variant/30 rounded-full text-sm font-medium">UI/UX</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pr-2">
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant text-lg">location_on</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-lowest border-none rounded-full text-sm focus:ring-2 focus:ring-primary-container w-48" placeholder="Location..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Freelancer Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Card 1: Top Match -->
+<div class="group relative bg-surface-container-lowest p-6 rounded-lg border-2 border-primary-container/30 hover:border-primary transition-all duration-300">
+<div class="absolute -top-3 left-6 px-3 py-1 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Top Match</div>
+<div class="flex gap-4 mb-6">
+<div class="relative">
+<img alt="Freelancer 1" class="w-16 h-16 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Professional male developer portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACzrHpRmUxOk2ASQDWIMuB6WimGvvqCU__6PKPyI_HwgpKN7CGeEvNJeYvzHTDk2swZVkLd2WEDnpwicOq7ZSdknYVfg-k4A6uviIL2WFG99LbtN1DAkMcCjdCct4t-sEOG09ihkT2uX4EHq0WD8ATHns0t68USjMGikoKHOmpVqjhXK_SAVFCbENrrTu_TQHqK8SEr1ZhKdk03VxGjd4QZDR48c2YzuV4RN88pSqruX9mosHUE5CJihz9g4eF8eDanxi_1sASbAVP"/>
+<div class="absolute -bottom-1 -right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Alex Nguyen</h3>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">98% Match</span>
+</div>
+<p class="text-on-surface-variant text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> HCMC, Vietnam
+                            </p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4 leading-relaxed">
+                        Senior Frontend Architect with 8+ years of experience in React and complex data visualizations.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">React</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">D3.js</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">Tailwind</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">+4</span>
+</div>
+<div class="grid grid-cols-4 gap-2 mb-6">
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden">
+<img alt="Portfolio 1" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Modern data dashboard interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA18yyXYK3RPvaDpp4neojYQfimijDaE2LBzywNMlemr5DMqb7zp5q4_HJcERqw1TRKUKQC-4BLA8dQpcWkgipuvdnF-88NhFDJIMSw-fa7Y2_AUb69HGYYTwTnaGGXNqf-0eDZTdHkO644WOjJMGW_ocFcIx4TeJnVJVixpdfECj7sJDdJTlNCoignWn1RVtEQebr_8o6dCGh4-7qkNs4KdxPbM-EcLnL5RKpSm3ebUP8Ln1L7X4pPSKM9iEYrZ0R-TfrS_CHT1BY4"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden">
+<img alt="Portfolio 2" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Clean software landing page design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV3TCwH6aO6mxCvQ6BbBVpfxb-mFNXTqs8NIK4L8Zlmss3vGBT6GIG2AplGGVWUn1py1eblzIjxQ7ieIMIMU6DFRFgvJ6rQElWhTTPT_Jg9qc0vmegDjEz8BU5xgpBpZTHmu5e-lmiml_HZHJpqTfOTEbw14vw1ZM2JjGmZKz23hIGj_hswFJNIjgvWkC62mDrOwrt9_43J-4avRP80zhRtNlRuAeeS8BKY1-iVoenzfDfS0TiiWDm--0FC_hSODUFZPKeUv1n9YRA"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden">
+<img alt="Portfolio 3" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Mobile app ui interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ0vHsAlsiJFLZbouLUzjjEIZNaLZT8glR3O3iqYJk7GZJ4hsw5bMLWY4zEuOhApaXVrhGOQWjFEBNov5hGJG_vUDSdG4svrxfBcl-yDDqFlOjy1-dBfB73yHoI5kVW1cDLGRycIHEImaAr2t6ldDfZCtIhiIAFppCCbbkhVnzbOZUSNOENNX4b56TC5i607bGWp5cmUKMCiB6Eftpa17eFrwr6QAWwLKnoKe5z0ps-Q_b3mIiyAv152_f5ElCTzE055WkxedSm4qz"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden relative">
+<img alt="Portfolio 4" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Developer workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCibRWxlqRXnnVH6lFLvyADyKfxp4N5PBoqBvVkHLUJU33QnQX0qrWrKJxetoolpjtbP2eQF_AqqGKhpZrScMql98EsJpEutkdCllwEyf40zuipUgTtQ3jWsBfCEQFG6wDg7VkF6tdZAfI1xMqcbxhsnjrJ8ypauR1MM1gJmRj0KO82b5cR6ee1KvHu4XF7yRtiWNeUTS4daxouDNDATSo9F30vjb9HowewbkwtbWczYEIl-y5AQQ-lmDu1ht5cEzpODke317mn4HRK"/>
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center text-white text-xs font-bold">+12</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xl font-bold text-on-surface">$65<span class="text-sm font-normal text-on-surface-variant">/hr</span></span>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-bold text-sm teal-gradient hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Mời ứng tuyển</button>
+</div>
+</div>
+<!-- Card 2: Top Match -->
+<div class="group relative bg-surface-container-lowest p-6 rounded-lg border-2 border-primary-container/30 hover:border-primary transition-all duration-300">
+<div class="absolute -top-3 left-6 px-3 py-1 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Top Match</div>
+<div class="flex gap-4 mb-6">
+<div class="relative">
+<img alt="Freelancer 2" class="w-16 h-16 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Confident female tech specialist portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHqGGlWpn_1mGgzSNxBmmcv2VP63I_Y0TD8yNmQqZqvO8BLSmebdYjgDtWTSi8FRHaxdiaw751fiiBWOj2ekmkgMPBmNxQuUTkZ0pwK7vYKge4rrUD-P3imYS_zDIZwrOWoIxFAenQMHyJwUJEarpioQXm7mfB7675M4glkBQ0SA_MwYfE2yToooI8bGKrHfe3zeu_dRQEJjxLtmxaeFyfy2KwgF6WzVSaxopVRZsP1OedV7YCnq81tW_Fk3v7QLIENFgBQ2Kzv1a2"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Elena V.</h3>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">96% Match</span>
+</div>
+<p class="text-on-surface-variant text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Remote, EU
+                            </p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4 leading-relaxed">Expert in TypeScript and Next.js performance optimization. Helping scale startups for 5 years.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">Next.js</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">TypeScript</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">Zustand</span>
+</div>
+<div class="grid grid-cols-4 gap-2 mb-6">
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden"><img class="w-full h-full object-cover opacity-80" data-alt="Saas product interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWPOu92Yg_WbOv47zyv2KwEkXmxZUlQzGo3oCGOOj4i5Y46n47g66yAHxEqHOJiUPvb7EV5peiYGIsBMxPxOB-HYwO2WkOw-W69nk_VO1LHng2NUVKPnL4MywCtu-jZn63HyqQuO__SzJ_HwwVM08pt8pJPdKonYcvU0J7xRCoogdwCzCZLa4UCtAc9VRK8E6H6KMBUjk_8i73sGLz7823EaL42JzpD08R3MpJv8tmUmQKW-Md0tpTR53IfkTLqtjZyYD-m3eCOOjn"/></div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden"><img class="w-full h-full object-cover opacity-80" data-alt="Marketing landing page" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyKYEA46m7UIqMetjCHDXiwIZPuF0pCNTZRyOzSraZsSBMHL9AoLwTY_x37SjVD1oVDDxeZkDXil-m9gAk6AxMy-kZOZVXrnFf_sr3NLoq7t7kEMDk0r23zRPgxdYwnB_XwRu2t5J1tbwXsbaXSjspwlnU51ZkvBRkCtmq2gIqJ_n0r754OK8ZBP5dooi956eY2khrivnc26BxC5gVEynLfBn3GFVlX_gZSrU5lruSDMMs6tA__5jkE1p-tSb5BbzzyaDARM9t4C3_"/></div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden"><img class="w-full h-full object-cover opacity-80" data-alt="Analytics dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEqTnBJmBYcYSKMkzGvMdVVsa5xcYyYxjW8KAA0anAt0YXdSTuaQpImF4wv1SXQugdNZe8FNbu1-TbggXZfZXN2f0Q-XVtBOm8pvUONMoNe85nqP-TPLMuG5YC5qca8WeCpHkaEBEBy37lyV6taIuXUcBquz6DcBjfJ6VlRtINEZi5pE0dYjw3zJTj_kArgl_EkO93qJi5tVxiTLNmvO9udjcAUapMui7nv2laLNoh39aIBnGZPG4S2EtIAjvB7esuiiP1IxQepuVy"/></div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden"><img class="w-full h-full object-cover opacity-80" data-alt="E-commerce site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-wPukxbnQ2vyYdekzEiCQQ14BAqWeprHkZvFDSH-1CfO5vkwngY0YDtLkkvhWg6qD3uKIx_UgFsfvKNyeKlYrBLqEAj7gKvw8aXPxw68MQgJM3T8oILGFbnH6nQW40isURKAW2shHTEYJqp6n_hFt3QhfVZGZi32eTMkMg92MC4qgluuooFqksOIGpy9CxArqJkIuKUTpY7tHfrg5Uv7UT5j9RFitouVMNYyFqkkXnzEIzfkFPts-UBaRKdx2HoDt6CB9zgCgGZVI"/></div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xl font-bold text-on-surface">$80<span class="text-sm font-normal text-on-surface-variant">/hr</span></span>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-bold text-sm teal-gradient active:scale-95 transition-all">Mời ứng tuyển</button>
+</div>
+</div>
+<!-- Card 3: Top Match -->
+<div class="group relative bg-surface-container-lowest p-6 rounded-lg border-2 border-primary-container/30 hover:border-primary transition-all duration-300">
+<div class="absolute -top-3 left-6 px-3 py-1 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Top Match</div>
+<div class="flex gap-4 mb-6">
+<div class="relative">
+<img alt="Freelancer 3" class="w-16 h-16 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Professional male developer with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_KvNutOz6TgrLqoo_h-gzadwSjbr2ftcLfFPWy2mPEViDGwhnaXTpdQK1pAkSFnwZ8HsMd6A75jUvHHSj3tJFeseESeOKqUVQnuxcTRSdbSZ8Fp41XFDVJqBoWj-jE2FUnKPRKdEq3R8xtouoKMwnqCujaFYGj19AW8vgK6BhKJZCOGz5-Mj7TmasX0t8LFB4vRy6EMRm1lt4nRsfcu-7eo8fTIvkaeoKr4F7jDUt8usMw9BTXMoJsVi-shvl36GmmLx9lpXMEUuu"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Marcus K.</h3>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">95% Match</span>
+</div>
+<p class="text-on-surface-variant text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Singapore
+                            </p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4 leading-relaxed">Full-stack React engineer specializing in real-time systems and WebSockets.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">React Native</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">Node.js</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-surface-container-low px-2 py-1 rounded">GraphQL</span>
+</div>
+<div class="grid grid-cols-4 gap-2 mb-6">
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden"><img class="w-full h-full object-cover opacity-80" data-alt="Portfolio mobile app" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-XKwyvLRV5Jkfjq2ZWlbfRELY-R9AoIQz_aqeiSZ7Uj6oLI18YzgwaKJjpeqzsTLpWKf_GtoheRDsQeFUc79Cs6seSRH1o2iwEs6EHT1J7iID4qJJ6uIZJAxgDFrtessap9GI-NGblgtrEAtsPRgO6ELbxvuPvnVrtW0pojuhXnyAVPKGuKtLIff3DOgvi3WV4ZqmjlAczaX9K_6K-C_ujl2b75ACdihAPWxVrrJpEHF4co4KUWn6P4hyVLvMzGgc5nfF6onycvI"/></div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden"><img class="w-full h-full object-cover opacity-80" data-alt="Code editor view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsdOExregHp8qNeh5cB0vng502fZol3l165Hxy-A3Kfyx0gjDau92jq4GW1x8jwDOTkQSVZ4zbFPLCS64lOyyLuLg3tb7ja6oov6wFvEexBT0dSJeDZ92vhGXYUwnm--jE-K_Q-f0J4PAXMINWJkIxsUQqUUjqzcf8HApVALlsYQKZKL2C0sbzuW8OdywwbHSnssGlEzGE-0E73GTY0jlotfuyIPDrddjE4E9C2bMnp_ekn02QoLGlIU7o_THfmya_ErM8UeZ4KZ7G"/></div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden"><img class="w-full h-full object-cover opacity-80" data-alt="Team collaboration dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsmqZh4DYl8UI_GDH1FhcWTVmVd3dPqt_IuTnurWF40SOxIaAy6UwmxPmoe7Z0Khk5GHV2-L2aqkyKFdekt2RhiHwE37s6zx75bbzURPf0zEmQ_Ift3PIhK3l352KT5vXtVy7Wf4Lzp5IIfBUi2JlQsByh7eAAxRcfDOd-RTUtaP7ytwfu5T5bETgri3wz4DP4Q7vzPae6mrKKy4mAoCR-KIezYh38DzsDwG-VOmsg8KFQgmdx95PyNU6cwZpgeA7VZ5FErRI7D9fZ"/></div>
+<div class="aspect-square bg-surface-container-low rounded-md overflow-hidden"><img class="w-full h-full object-cover opacity-80" data-alt="Business analytics app" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhCi5ngEclXgzRNd6APnkYTQIOazI1Livx-HX2QzHgdiLJJkedvBzW78XYh5c18lvUkDK1JNQR4kw6ZRXpGopEokCciLzZU4ZQUhon1T5Ic16qr_tO4OGVPruGKQ3Uly-e2-j2MLFECKAIfP9_kMn5LVnnlr1sK1hScCUHPhfCrd6G1OF-VRGn5aYaD9hU3XFz4EO8x2ZfgIzjDJHfHAL_IjZ4dlUEMNYs4D3mayHDB1R4d9L9WKGMYP4JSUzvSMKjwqo_qBC5MXzE"/></div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<span class="text-xl font-bold text-on-surface">$72<span class="text-sm font-normal text-on-surface-variant">/hr</span></span>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-bold text-sm teal-gradient active:scale-95 transition-all">Mời ứng tuyển</button>
+</div>
+</div>
+<!-- Regular Cards (Simplified for display) -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="flex gap-4 mb-4">
+<img class="w-12 h-12 rounded-full object-cover grayscale" data-alt="Portrait of a developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzmgnaWGG64n_Uy6TEM4kZf1qrCYHwbMCSxTCNgkCg9nbQ9fXpxoFD1bEGRoYAfyn9zmXtBSnDCtOekd61cQQ271JP8DnXUCSbf881dmAytSuarmaw9FRV3FWOOH374J0F-DKk0nCLrY8YQFb2wsZLBWA679dsJxxytKVGB8I9W_VVHNG-tOlXROSsl05my0hzvU-hrmxJ77P40DffF31g0YjDzcRirS0yzJMwKAbegtUCzRqlGiT-oORmvvhKtjoJVUYlVL7mC3y_"/>
+<div>
+<h3 class="font-bold text-base">Tran Minh T.</h3>
+<span class="text-xs text-on-surface-variant">92% Match • $45/hr</span>
+</div>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="text-[9px] font-bold uppercase bg-surface-container-low px-2 py-1 rounded">React</span>
+<span class="text-[9px] font-bold uppercase bg-surface-container-low px-2 py-1 rounded">Redux</span>
+</div>
+<button class="w-full border border-primary text-primary py-2 rounded-full text-sm font-bold hover:bg-primary/5 transition-colors">Mời ứng tuyển</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="flex gap-4 mb-4">
+<img class="w-12 h-12 rounded-full object-cover grayscale" data-alt="Portrait of a female developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJkOf1nhOCvfUDHovGT9zLhLgbV0OmMEppSX0YiivrDC3_UpcVMy4Xsn1j6ygUNZLx7Y100e7eHvVQXzjEhUQR9nVdMwxIxfshUjEH-YQCCSApBfmc4HRZNld-WYvcgOVVC00NClEsyjg0tFAdP-L4vQ2mKf0NViS53vXm_aNnEcd-wXbDLUPKVRkuuEvJSe1SHk5iWkTe9jn9jlzquLrCaOZmx9X6weBCaWOQYi8mIxOYXJX9C5ge4rTu3ABF2kbabI3zkrpu06jv"/>
+<div>
+<h3 class="font-bold text-base">Sarah L.</h3>
+<span class="text-xs text-on-surface-variant">91% Match • $95/hr</span>
+</div>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="text-[9px] font-bold uppercase bg-surface-container-low px-2 py-1 rounded">Architect</span>
+<span class="text-[9px] font-bold uppercase bg-surface-container-low px-2 py-1 rounded">Lead</span>
+</div>
+<button class="w-full border border-primary text-primary py-2 rounded-full text-sm font-bold hover:bg-primary/5 transition-colors">Mời ứng tuyển</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="flex gap-4 mb-4">
+<img class="w-12 h-12 rounded-full object-cover grayscale" data-alt="Portrait of a male designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM06CqlZG8UBEZBlt5JKdkUl5n4IKvPx6FQXO4kyjNOFdo29RMKEJYR9Zca77RiEXoN07SnKRmBH530u95PV0SddCvzhiRsm-m9p7nxWakVo2j6PqHoenuikNVQ_wdY-9xLJSxznH2D90-9_FA8FwpKOHCC_-lEGTehvFUkdYu2ICuVBaUYPcOlPvJMnVEjSKnBzCEGUXz3qvJLzFHGymP5lSfSrfJKBrIilt4WSoX1iWQuJGEvFFFp0KLeNHCBWIB3P51QAumJdy6"/>
+<div>
+<h3 class="font-bold text-base">James O.</h3>
+<span class="text-xs text-on-surface-variant">89% Match • $55/hr</span>
+</div>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="text-[9px] font-bold uppercase bg-surface-container-low px-2 py-1 rounded">UI/UX</span>
+<span class="text-[9px] font-bold uppercase bg-surface-container-low px-2 py-1 rounded">React</span>
+</div>
+<button class="w-full border border-primary text-primary py-2 rounded-full text-sm font-bold hover:bg-primary/5 transition-colors">Mời ứng tuyển</button>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center">
+<button class="px-12 py-4 border-2 border-primary/20 text-primary rounded-full font-bold hover:bg-primary/5 transition-all active:scale-95">Xem thêm</button>
+</div>
+</section>
+<!-- Right Sidebar: AI Explanations -->
+<aside class="hidden xl:block w-80 space-y-6">
+<div class="bg-white/50 backdrop-blur-md p-6 rounded-lg sticky top-24 border border-outline-variant/10">
+<h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-teal-500" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    Tại sao đề xuất?
+                </h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Hệ thống phân tích kỹ năng và lịch sử làm việc của freelancer để tìm ra sự tương đồng tốt nhất.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-teal-600 bg-teal-50 rounded-full p-1 text-sm">check_circle</span>
+<div>
+<span class="text-sm font-bold block">80% skill overlap</span>
+<span class="text-xs text-on-surface-variant">Khớp hoàn toàn với React, TS, Tailwind.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-teal-600 bg-teal-50 rounded-full p-1 text-sm">check_circle</span>
+<div>
+<span class="text-sm font-bold block">95% availability match</span>
+<span class="text-xs text-on-surface-variant">Có thể bắt đầu làm việc ngay lập tức.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-teal-600 bg-teal-50 rounded-full p-1 text-sm">check_circle</span>
+<div>
+<span class="text-sm font-bold block">Past Success</span>
+<span class="text-xs text-on-surface-variant">Đã hoàn thành 12 dự án tương tự.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-teal-600 bg-teal-50 rounded-full p-1 text-sm">check_circle</span>
+<div>
+<span class="text-sm font-bold block">Reliability Score</span>
+<span class="text-xs text-on-surface-variant">Tỉ lệ phản hồi trong vòng 2 giờ.</span>
+</div>
+</li>
+</ul>
+<div class="mt-8 pt-6 border-t border-outline-variant/20">
+<div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Matching Confidence</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full w-[94%] teal-gradient"></div>
+</div>
+<span class="text-xs text-primary font-bold mt-2 inline-block">Very High (94%)</span>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-100 bg-white tonal-shift flex flex-col md:flex-row justify-between items-center px-12 py-8 gap-4 font-['Inter'] text-xs uppercase tracking-widest font-medium">
+<span class="text-slate-400">© 2024 Lumina AI Freelance. The Intelligent Atmosphere.</span>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-teal-500 hover:underline underline-offset-4 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-teal-500 hover:underline underline-offset-4 transition-opacity" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-teal-500 hover:underline underline-offset-4 transition-opacity" href="#">Cookie Settings</a>
+<a class="text-slate-400 hover:text-teal-500 hover:underline underline-offset-4 transition-opacity" href="#">Help Center</a>
+</div>
+</footer>
+</body></html>

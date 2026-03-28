@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FreelanceAI - Client Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary": "#ffffff",
+                "surface-variant": "#dde4e0",
+                "surface-container-low": "#eef5f1",
+                "surface-bright": "#f4fbf7",
+                "primary-fixed-dim": "#44ddc1",
+                "primary-fixed": "#68fadd",
+                "on-surface": "#161d1b",
+                "secondary": "#4355b9",
+                "surface-dim": "#d4dcd8",
+                "outline": "#6c7a76",
+                "on-primary-fixed": "#00201a",
+                "on-primary-container": "#00473c",
+                "on-background": "#161d1b",
+                "primary-container": "#00bfa5",
+                "on-secondary": "#ffffff",
+                "background": "#f4fbf7",
+                "inverse-on-surface": "#ebf2ef",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed-dim": "#bac3ff",
+                "secondary-fixed": "#dee0ff",
+                "on-secondary-fixed-variant": "#293ca0",
+                "primary": "#006b5c",
+                "tertiary-fixed": "#ffdbd2",
+                "on-tertiary-container": "#74220b",
+                "tertiary": "#9f4128",
+                "inverse-primary": "#44ddc1",
+                "surface": "#f4fbf7",
+                "on-surface-variant": "#3c4a46",
+                "tertiary-container": "#fe896a",
+                "on-tertiary-fixed": "#3c0800",
+                "on-error-container": "#93000a",
+                "on-error": "#ffffff",
+                "tertiary-fixed-dim": "#ffb4a1",
+                "surface-container-high": "#e3eae6",
+                "surface-container": "#e8efec",
+                "error": "#ba1a1a",
+                "surface-container-highest": "#dde4e0",
+                "on-primary-fixed-variant": "#005145",
+                "on-tertiary-fixed-variant": "#7f2a13",
+                "outline-variant": "#bbcac4",
+                "surface-tint": "#006b5c",
+                "on-secondary-fixed": "#00105c",
+                "on-tertiary": "#ffffff",
+                "secondary-container": "#8596ff",
+                "on-secondary-container": "#11278e",
+                "inverse-surface": "#2b3230"
+              },
+              fontFamily: {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm shadow-teal-900/5 flex justify-between items-center px-6 py-3 w-full font-['Inter'] antialiased">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-teal-700">FreelanceAI</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-teal-700 font-semibold transition-colors" href="#">Client</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined text-slate-500 hover:bg-teal-50/50 p-2 rounded-full cursor-pointer transition-colors">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</div>
+<img alt="User Avatar" class="w-8 h-8 rounded-full border border-outline-variant" data-alt="Professional corporate client profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjztcF2e--hLf_iRq_fM2vFyyPCqX_1sMYYtE2_cr2w8FEI6RnaXRxGwvIJOLaFrPtrYm5zLO4cjKFUwMF2lNsqh1qMYFwooMCaTO0Ru9esY3Tx8MbXsROqnLR8btnsWvfaG_ixdipbJZotwJDygUjSVd4qJ_lGfqluVyHRV2dcUDe21uaC6YOLOZh8krJ8ZcAOl-WVfbrgcDVmcKyrZF47tw6NcWYYPJ8W2QKtECux5ZK_8Q-nSx0KowLm1h3nYw_yWcX2I3Po6bK"/>
+</div>
+</nav>
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 pt-20 bg-slate-50 flex flex-col h-full border-r border-slate-200/50 font-['Inter'] text-sm font-medium">
+<div class="px-6 py-4 flex flex-col gap-1">
+<div class="flex items-center gap-3 px-4 py-3 text-teal-700 border-r-4 border-teal-500 bg-teal-50/50 transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</div>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-teal-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Post a Job</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-teal-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">work</span>
+<span>My Jobs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-teal-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Talent Pool</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-teal-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span>Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-teal-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</div>
+<div class="mt-auto px-6 py-6">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-teal-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 pb-20 px-10 min-h-screen">
+<div class="grid grid-cols-12 gap-10">
+<!-- Left Column: Welcome & Stats -->
+<div class="col-span-12 lg:col-span-3 flex flex-col gap-8">
+<header>
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface mb-1">Chào Công ty ABC</h1>
+<p class="text-on-surface-variant body-lg">Đây là tổng quan về hoạt động của bạn hôm nay.</p>
+</header>
+<div class="grid grid-cols-1 gap-4">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border-l-4 border-primary">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Active Jobs</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-3xl font-black text-on-surface">4</span>
+<span class="text-primary text-xs font-medium">Live Now</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border-l-4 border-secondary">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Total Budget Spent</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-3xl font-black text-on-surface">120M</span>
+<span class="text-secondary text-xs font-medium">VND</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border-l-4 border-tertiary-container">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Avg AI Match</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-3xl font-black text-on-surface">88%</span>
+<span class="text-tertiary text-xs font-medium">+5% pts</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border-l-4 border-primary-container">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">New Apps</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-3xl font-black text-on-surface">12</span>
+<span class="text-primary-container text-xs font-medium">Last 24h</span>
+</div>
+</div>
+</div>
+<!-- Quick Actions Section -->
+<section class="mt-4 bg-surface-container-low p-6 rounded-lg">
+<h3 class="text-sm font-bold uppercase tracking-tighter mb-4 text-on-surface-variant">Quick Actions</h3>
+<div class="flex flex-col gap-3">
+<button class="flex items-center gap-3 p-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-full font-semibold shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+                            Post a New Job
+                        </button>
+<button class="flex items-center gap-3 p-4 bg-secondary-container text-on-secondary-container rounded-full font-semibold active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                            Review Applications
+                        </button>
+<button class="flex items-center gap-3 p-4 bg-surface-container-lowest text-primary rounded-full font-semibold border border-primary/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined">search</span>
+                            View Talent Pool
+                        </button>
+</div>
+</section>
+</div>
+<!-- Center Column: Active Postings Grid -->
+<div class="col-span-12 lg:col-span-6">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-black text-on-surface">Your Active Job Postings</h2>
+<a class="text-primary font-bold text-sm flex items-center gap-1 hover:underline" href="#">
+                        View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Senior UI/UX Designer for Fintech</h3>
+<div class="flex gap-2 mt-2">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight">Design</span>
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full text-xs font-medium">Urgent</span>
+</div>
+</div>
+<div class="bg-primary/5 p-3 rounded-xl text-center min-w-[80px]">
+<p class="text-[10px] font-bold text-primary uppercase">Avg Match</p>
+<p class="text-xl font-black text-primary">94%</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 border-t border-surface-container-low pt-6">
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Budget</p>
+<p class="text-base font-bold text-on-surface">35M - 45M</p>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Apps count</p>
+<p class="text-base font-bold text-on-surface">24 Applicants</p>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Deadline</p>
+<p class="text-base font-bold text-on-surface">Oct 24, 2026</p>
+</div>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Python AI Integration Expert</h3>
+<div class="flex gap-2 mt-2">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight">Engineering</span>
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full text-xs font-medium">Fixed Price</span>
+</div>
+</div>
+<div class="bg-primary/5 p-3 rounded-xl text-center min-w-[80px]">
+<p class="text-[10px] font-bold text-primary uppercase">Avg Match</p>
+<p class="text-xl font-black text-primary">82%</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 border-t border-surface-container-low pt-6">
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Budget</p>
+<p class="text-base font-bold text-on-surface">80M VND</p>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Apps count</p>
+<p class="text-base font-bold text-on-surface">8 Applicants</p>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Deadline</p>
+<p class="text-base font-bold text-on-surface">Nov 02, 2026</p>
+</div>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">E-commerce Marketing Strategist</h3>
+<div class="flex gap-2 mt-2">
+<span class="bg-tertiary/10 text-tertiary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight">Marketing</span>
+</div>
+</div>
+<div class="bg-primary/5 p-3 rounded-xl text-center min-w-[80px]">
+<p class="text-[10px] font-bold text-primary uppercase">Avg Match</p>
+<p class="text-xl font-black text-primary">89%</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 border-t border-surface-container-low pt-6">
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Budget</p>
+<p class="text-base font-bold text-on-surface">20M / Month</p>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Apps count</p>
+<p class="text-base font-bold text-on-surface">42 Applicants</p>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Deadline</p>
+<p class="text-base font-bold text-on-surface">Oct 28, 2026</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<section class="mt-12">
+<h2 class="text-2xl font-black text-on-surface mb-6">Recent Activity</h2>
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col gap-6">
+<div class="flex gap-4">
+<div class="bg-primary/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">person_add</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Minh Dang applied for <span class="text-primary font-bold">Python AI Integration Expert</span></p>
+<p class="text-xs text-on-surface-variant mt-1">2 hours ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-secondary/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-xl">chat_bubble</span>
+</div>
+<div>
+<p class="text-sm font-semibold">New message from <span class="text-secondary font-bold">Linh Tran</span> regarding UI Design Project</p>
+<p class="text-xs text-on-surface-variant mt-1">4 hours ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-tertiary/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-xl">payments</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Payment of <span class="text-on-surface font-bold">15,000,000 VND</span> released to Hieu Nguyen</p>
+<p class="text-xs text-on-surface-variant mt-1">Yesterday</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: AI Recommendations -->
+<div class="col-span-12 lg:col-span-3">
+<div class="bg-surface-container-low p-6 rounded-lg h-full">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h2 class="text-lg font-black text-on-surface leading-tight uppercase tracking-tight">Top AI Recommended</h2>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Freelancer 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-center mb-4">
+<img alt="Freelancer 1" class="w-12 h-12 rounded-full ring-2 ring-primary-container ring-offset-2" data-alt="Freelancer female profile photo portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaqr-qO4N7pMEwijGZU1Z1todd8-tuEpJHxr2-SjO5fdEAD28eLQyOiL8C6Qwv09zYOwGzglBd6tSklgoP8FwENJ9cUvNs4Y8unQveXIlVDwRXvaBfSJsjmx_A6UKT-sgkroJzgnGnMQzOCqQw45P6IRETZMCnLpUK9nYey_jtv1LuMsk3uc5F0Jf59grfK80QtuX38ontlP7eu5qM7XMXsPnoVDmL8SZ-L48jjUDu4PGtJKZGK0fUyF5O6mq3W8wflPdr_XSgo20x"/>
+<div class="bg-primary/10 text-primary text-xs font-black px-2 py-1 rounded">98% MATCH</div>
+</div>
+<h4 class="font-bold text-on-surface">Le Ha My</h4>
+<p class="text-xs text-on-surface-variant mt-1 mb-3">Senior Brand Designer</p>
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-0.5 rounded">Figma</span>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-0.5 rounded">Adobe Suite</span>
+</div>
+<div class="flex items-center justify-between border-t border-surface-container-low pt-4">
+<span class="text-sm font-black">$45<span class="text-[10px] text-on-surface-variant font-normal">/hr</span></span>
+<button class="text-primary text-xs font-extrabold uppercase tracking-widest hover:bg-primary hover:text-white px-3 py-2 rounded-full transition-all">Invite</button>
+</div>
+</div>
+<!-- Freelancer 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-center mb-4">
+<img alt="Freelancer 2" class="w-12 h-12 rounded-full ring-2 ring-primary ring-offset-2" data-alt="Freelancer male developer profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaeTNxzVf-HE2CBP60DCB1YWHezixQrRzrcz5w75U8B7GsrHDXURMkL2bOVoM_3QQuIcH1-vhuuMVt96jTWqHsUPEMc-DeH6WbF2EkNXLPOpdHOzBo7UU6wX0CkayQMr2DqLsjKtZFzOyJ9b93kY9BwC3So6RqUZ7ia5GKCVioFPqCb0B-1mBkabn8EtdiXyjkyQOvrhVWpJWdnylTX-T8B4LB_i0qYmuRQZrhivxqJWVQa_OO0adMc17UIHAsQSCg3oEHT8Q4wjXb"/>
+<div class="bg-primary/10 text-primary text-xs font-black px-2 py-1 rounded">95% MATCH</div>
+</div>
+<h4 class="font-bold text-on-surface">Nguyen Quang</h4>
+<p class="text-xs text-on-surface-variant mt-1 mb-3">Fullstack Engineer</p>
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-0.5 rounded">Python</span>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-0.5 rounded">React</span>
+</div>
+<div class="flex items-center justify-between border-t border-surface-container-low pt-4">
+<span class="text-sm font-black">$60<span class="text-[10px] text-on-surface-variant font-normal">/hr</span></span>
+<button class="text-primary text-xs font-extrabold uppercase tracking-widest hover:bg-primary hover:text-white px-3 py-2 rounded-full transition-all">Invite</button>
+</div>
+</div>
+<!-- Freelancer 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-center mb-4">
+<img alt="Freelancer 3" class="w-12 h-12 rounded-full ring-2 ring-secondary ring-offset-2" data-alt="Business professional woman profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3CE-Ffog1klHN2b6rSKYjJmZapJjcd4iZHGhf2lYnA4k-VqW3N8a9X1Rg7E90njNGQWG8Q_3Yw-ra89fn56uzlykLVOPoVRGC8ZrxOLk6AgJ1aLpYT8jJvL87lmwGvV06_EwH71ajWEc2213DQrIF7C7FjjM4UaThTIfzJSDBKBB78SDir-1WnNqfKeN45vw2C1WO08PhRjp-eqw0I2cJG0E9i5RF57Ln0Bn_QcQzdairl_ZxpWA-qGyUcizn8ElldoANolcnOf79"/>
+<div class="bg-primary/10 text-primary text-xs font-black px-2 py-1 rounded">92% MATCH</div>
+</div>
+<h4 class="font-bold text-on-surface">Phan Linh</h4>
+<p class="text-xs text-on-surface-variant mt-1 mb-3">Project Manager</p>
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-0.5 rounded">Agile</span>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-0.5 rounded">Jira</span>
+</div>
+<div class="flex items-center justify-between border-t border-surface-container-low pt-4">
+<span class="text-sm font-black">$35<span class="text-[10px] text-on-surface-variant font-normal">/hr</span></span>
+<button class="text-primary text-xs font-extrabold uppercase tracking-widest hover:bg-primary hover:text-white px-3 py-2 rounded-full transition-all">Invite</button>
+</div>
+</div>
+<!-- Freelancer 4 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-colors">
+<div class="flex justify-between items-center mb-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-black">TM</div>
+<div class="bg-primary/10 text-primary text-xs font-black px-2 py-1 rounded">91% MATCH</div>
+</div>
+<h4 class="font-bold text-on-surface">Tran Minh</h4>
+<p class="text-xs text-on-surface-variant mt-1 mb-3">Copywriter &amp; SEO</p>
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-0.5 rounded">SEO</span>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-0.5 rounded">Content</span>
+</div>
+<div class="flex items-center justify-between border-t border-surface-container-low pt-4">
+<span class="text-sm font-black">$25<span class="text-[10px] text-on-surface-variant font-normal">/hr</span></span>
+<button class="text-primary text-xs font-extrabold uppercase tracking-widest hover:bg-primary hover:text-white px-3 py-2 rounded-full transition-all">Invite</button>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-4 border-2 border-dashed border-primary/20 text-primary font-bold rounded-lg hover:bg-primary/5 transition-colors">
+                        Discover More Talent
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button for Mobile -->
+<button class="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform z-50">
+<span class="material-symbols-outlined">add</span>
+</button>
+</body></html>

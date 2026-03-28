@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#fe896a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dde4e0",
+                        "on-surface": "#161d1b",
+                        "surface-container-low": "#eef5f1",
+                        "primary-fixed-dim": "#44ddc1",
+                        "on-primary-fixed-variant": "#005145",
+                        "tertiary-fixed": "#ffdbd2",
+                        "surface-container-high": "#e3eae6",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dde4e0",
+                        "on-background": "#161d1b",
+                        "tertiary": "#9f4128",
+                        "on-secondary-fixed-variant": "#293ca0",
+                        "secondary-fixed-dim": "#bac3ff",
+                        "inverse-surface": "#2b3230",
+                        "on-primary-fixed": "#00201a",
+                        "surface-tint": "#006b5c",
+                        "surface-bright": "#f4fbf7",
+                        "on-primary-container": "#00473c",
+                        "secondary-container": "#8596ff",
+                        "secondary": "#4355b9",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#dee0ff",
+                        "tertiary-fixed-dim": "#ffb4a1",
+                        "outline-variant": "#bbcac4",
+                        "on-tertiary-fixed-variant": "#7f2a13",
+                        "on-secondary-container": "#11278e",
+                        "on-secondary-fixed": "#00105c",
+                        "on-surface-variant": "#3c4a46",
+                        "primary": "#006b5c",
+                        "surface-container": "#e8efec",
+                        "background": "#f4fbf7",
+                        "inverse-on-surface": "#ebf2ef",
+                        "surface": "#f4fbf7",
+                        "primary-fixed": "#68fadd",
+                        "on-tertiary-fixed": "#3c0800",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#d4dcd8",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#44ddc1",
+                        "primary-container": "#00bfa5",
+                        "on-error-container": "#93000a",
+                        "outline": "#6c7a76",
+                        "on-tertiary-container": "#74220b"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm shadow-teal-900/5 flex items-center justify-between px-8 h-16 w-full font-['Inter'] antialiased">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tight text-teal-700">The Fluid Professional</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 hover:text-teal-600 transition-all duration-300" href="#">Dashboard</a>
+<a class="text-slate-500 hover:text-teal-600 transition-all duration-300" href="#">Talent Pool</a>
+<a class="text-slate-500 hover:text-teal-600 transition-all duration-300" href="#">Messages</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-slate-500 hover:bg-slate-50/50 rounded-full transition-all">notifications</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2 rounded-full font-semibold shadow-md active:scale-95 transform transition-transform">Post a Job</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Professional user profile headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKOnl4rqHwUapKWP6yEHSjeMg42XnDjv8B8Aj0JEWUi-cVYQJf6H_zDaZodahQyZW61_nDINs0mVUF5A7DquLfgAhljA9o02vWaBkvHvy0FNcTn4OXfS_wV-q9GXiX7Lmhhxpo6ECLWkYVaQ0PeMfd9NRc31sZ9kvSSV7kHdmY7irWbkpOPeiwfSf4QAEbJk-sq-3o7ZCZZBIkxCG5KfV9qKUOsLyMtEiEjDdN0lrr2bvpPLYNN85VVUETltX12XyxDi4rsfHmlUsa"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 pt-20 bg-slate-50 flex flex-col gap-2 p-4 border-r border-slate-100 text-sm font-medium font-['Inter']">
+<div class="mb-6 px-4">
+<h2 class="text-teal-700 font-bold text-lg">Client Portal</h2>
+<p class="text-slate-500 text-xs">Premium Matching</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform hover:text-teal-600" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform hover:text-teal-600" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+                Post a Job
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-teal-700 bg-white rounded-full shadow-sm" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
+                My Jobs
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform hover:text-teal-600" href="#">
+<span class="material-symbols-outlined">group</span>
+                Talent Pool
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform hover:text-teal-600" href="#">
+<span class="material-symbols-outlined">forum</span>
+                Messages
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 transition-transform hover:text-teal-600" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto flex flex-col gap-1 border-t border-slate-200 pt-4">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-teal-600" href="#">
+<span class="material-symbols-outlined">help</span>
+                Help Center
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-error" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Sign Out
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 mr-[400px] pt-20 px-10 pb-20">
+<!-- Header Section -->
+<header class="mb-10">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface mb-2">Quản lý đơn ứng tuyển</h1>
+<p class="text-on-surface-variant">Xem và phê duyệt các ứng viên tiềm năng cho dự án của bạn.</p>
+</header>
+<!-- Filter Bar -->
+<section class="bg-surface-container-low p-4 rounded-lg mb-8 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="relative min-w-[200px]">
+<select class="w-full bg-surface-container-lowest border-none rounded-full px-6 py-2.5 text-sm appearance-none focus:ring-2 focus:ring-primary shadow-sm">
+<option>Chọn công việc</option>
+<option>Senior Frontend Developer</option>
+<option>AI Engineer Specialist</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+<div class="flex bg-surface-container-high p-1 rounded-full">
+<button class="px-5 py-1.5 rounded-full text-sm font-semibold bg-white shadow-sm text-primary">Tất cả</button>
+<button class="px-5 py-1.5 rounded-full text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Chờ duyệt</button>
+<button class="px-5 py-1.5 rounded-full text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Đã chấp nhận</button>
+<button class="px-5 py-1.5 rounded-full text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Đã từ chối</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-medium text-on-surface-variant">Sắp xếp:</span>
+<div class="relative">
+<select class="bg-transparent border-none text-sm font-bold text-primary focus:ring-0 cursor-pointer appearance-none pr-8">
+<option>Match Score</option>
+<option>Mới nhất</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-primary">swap_vert</span>
+</div>
+</div>
+</section>
+<!-- Main List -->
+<div class="space-y-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-transparent hover:border-primary/20 transition-all duration-300 group">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-4">
+<img alt="Phạm Minh T." class="w-14 h-14 rounded-full object-cover border-2 border-primary-container/30" data-alt="Portrait of a male developer freelancer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM0pnsRGOSFiLzf15PqE415qSl8OhpQF1VrliZ-auTwXgWIdwLctJCmulH6uO2SOKTSGNXT2WoqaPkqeft-3CLLAg92UQ3ogcpZ9c8Wg3eiJX3arCyesQLPfbj1rWTMt3pUXvMfrHLbM6yTbH8aOiOoqEZz7ZgSawVSZj2aveBMiPSrK5PJA-cN7uyxprnW6Ctuae2Cw29N3Spf1J-4H_9hasvRX6dPR6odPNGnRboiFGfW8Zov4vfYumaqUlYgZ5ZxdreErqO1P3q"/>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="text-lg font-bold">Phạm Minh T.</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">95% Match</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-0.5">Ứng tuyển lúc: 12/05/2026</p>
+</div>
+</div>
+<span class="bg-amber-100 text-amber-700 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-tight">Đang chờ</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-medium">React</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-medium">TypeScript</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-medium">Node.js</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-2 mb-6">
+                    Tôi rất hào hứng với dự án này vì kinh nghiệm của tôi trong việc xây dựng dashboard AI cho các hệ thống quản lý nhân sự quy mô lớn. Tôi đã từng tối ưu hóa performance cho các ứng dụng React...
+                </p>
+<div class="flex items-center justify-between border-t border-surface-container pt-5">
+<div class="flex items-center gap-3">
+<button class="px-5 py-2 rounded-full border border-primary text-primary text-sm font-bold hover:bg-primary/5 transition-colors">Xem hồ sơ</button>
+<button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold shadow-md hover:shadow-lg transition-all active:scale-95">Chấp nhận</button>
+<button class="px-5 py-2 rounded-full border border-slate-300 text-slate-500 text-sm font-bold hover:bg-slate-50 transition-colors">Từ chối</button>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary-container/20 text-on-secondary-container hover:bg-secondary-container/40 transition-colors">
+<span class="material-symbols-outlined">forum</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-transparent hover:border-primary/20 transition-all duration-300 group opacity-90">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-4">
+<img alt="Le Thu H." class="w-14 h-14 rounded-full object-cover border-2 border-primary-container/30" data-alt="Portrait of a female developer freelancer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0_zAGwZ1ue63TufpckUCT6Um6TC-_gvc_w0UZOjJ7QVRbQSwuRsBkkaES6ybjvcG9BSLYbfLO_noPHM_TM6udIxht-F1WZrJ_3cQwarU1jKYZe-plU0WqLudoLrQ8lRn01YO9nnQ55s5yv28v4U1R5cYyTnbLmI-jFpDCn0yWsAxcqzc2Gs3oFPuLjLysrHSNO9OUJtvjBrCNAv3jbwoxxY_2yC0F7PSRYSKie0fAGzM86rq033O0-KPneJn5vT7d70J3YFPDANf4"/>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="text-lg font-bold">Lê Thu H.</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">88% Match</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-0.5">Ứng tuyển lúc: 11/05/2026</p>
+</div>
+</div>
+<span class="bg-green-100 text-green-700 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-tight">Chấp nhận</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-medium">Next.js</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant rounded-full text-xs font-medium">Tailwind CSS</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-2 mb-6">
+                    Với hơn 5 năm kinh nghiệm làm việc với Next.js và kiến trúc micro-frontends, tôi tin rằng mình có thể mang lại giải pháp kiến trúc bền vững cho sản phẩm của quý công ty...
+                </p>
+<div class="flex items-center justify-between border-t border-surface-container pt-5">
+<div class="flex items-center gap-3">
+<button class="px-5 py-2 rounded-full border border-primary text-primary text-sm font-bold hover:bg-primary/5 transition-colors">Xem hồ sơ</button>
+<button class="px-5 py-2 rounded-full border border-slate-300 text-slate-500 text-sm font-bold opacity-50 cursor-not-allowed">Đã phê duyệt</button>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary-container/20 text-on-secondary-container hover:bg-secondary-container/40 transition-colors">
+<span class="material-symbols-outlined">forum</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<footer class="mt-12 flex justify-center items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-slate-400">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-bold text-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-sm font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-sm font-medium">3</button>
+<span class="px-2 text-slate-400">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-sm font-medium">10</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-slate-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</footer>
+</main>
+<!-- Right Sidebar: Candidate Preview -->
+<aside class="fixed right-0 top-0 h-screen w-[400px] pt-24 pb-10 px-8 bg-white border-l border-slate-100 z-40 overflow-y-auto">
+<div class="flex flex-col items-center text-center mb-8">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary to-primary-container">
+<img alt="Selected Freelancer" class="w-full h-full rounded-full object-cover border-4 border-white" data-alt="Close up portrait of the selected candidate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGZIrpGrXxq5YJXkfLBJjXu3YAjusS8sn7k5ljKt0Bjj97XQP2JiXS_o2-AxEm21iA-FstbVftTX9QfovgzPLHV3ledzF6pSGvIPnFD0HpPt0kVeE3GDHiIt02XpJns56ClH7oqFcttcd2NUz6ROL2srBjt2iaNXEjFLw2fMrSTLi7HrQalBoscMWiHYTc9OoUfv-uQqHbtbwfNbBpwQsfokH-J10acXImUXTpr9QuS7NsuI_d-v2aex3KXQc7lFY-AaZCSd7qJE1y"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-green-500 w-6 h-6 rounded-full border-4 border-white"></div>
+</div>
+<h2 class="text-2xl font-bold text-on-surface">Phạm Minh T.</h2>
+<p class="text-primary font-medium">Senior Frontend Developer</p>
+</div>
+<!-- AI Insights -->
+<div class="space-y-8">
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h4 class="font-bold text-sm uppercase tracking-wider">AI Match Breakdown</h4>
+</div>
+<div class="space-y-5">
+<div>
+<div class="flex justify-between text-xs font-bold mb-1.5 uppercase tracking-wide">
+<span>Kỹ năng chuyên môn</span>
+<span class="text-primary">98%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-bold mb-1.5 uppercase tracking-wide">
+<span>Kinh nghiệm</span>
+<span class="text-primary">92%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-bold mb-1.5 uppercase tracking-wide">
+<span>Giá cả</span>
+<span class="text-primary">85%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative bg-primary-container/5 p-6 rounded-lg border-l-4 border-primary">
+<span class="material-symbols-outlined absolute top-4 right-4 text-primary/30 text-4xl">format_quote</span>
+<h4 class="text-sm font-bold mb-2">Recommendation Summary</h4>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+                    "AI đề xuất vì kỹ năng React và D3.js vượt trội so với yêu cầu dự án. Ứng viên này có tỉ lệ hoàn thành dự án tương tự lên tới 96%."
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors group">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary mb-1">download</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Download CV</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors group">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary mb-1">share</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Share Profile</span>
+</button>
+</div>
+</div>
+</aside>
+</body></html>
