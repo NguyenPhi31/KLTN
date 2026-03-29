@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN "cvText" TEXT;
+ALTER TABLE "User" ADD COLUMN "cvUrl" TEXT;

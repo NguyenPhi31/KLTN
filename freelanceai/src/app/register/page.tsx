@@ -11,6 +11,7 @@ export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [companyName, setCompanyName] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,7 +24,7 @@ export default function RegisterPage() {
       const res = await fetch("/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password, role }),
+        body: JSON.stringify({ name, email, password, role, companyName }),
       });
 
       if (!res.ok) {
@@ -127,6 +128,23 @@ export default function RegisterPage() {
               />
             </div>
           </div>
+
+          {role === "CLIENT" && (
+            <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
+              <label className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Tên Công ty</label>
+              <div className="relative group">
+                <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">business</span>
+                <input 
+                  className="w-full pl-12 pr-4 py-4 bg-surface rounded-full border-none ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-outline" 
+                  placeholder="Công ty TNHH AI Việt Nam" 
+                  type="text"
+                  required
+                  value={companyName}
+                  onChange={(e) => setCompanyName(e.target.value)}
+                />
+              </div>
+            </div>
+          )}
 
           <button 
             disabled={isLoading}

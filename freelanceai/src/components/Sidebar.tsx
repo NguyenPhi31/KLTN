@@ -28,6 +28,10 @@ export default function Sidebar({ role }: { role?: string }) {
           <span className="material-symbols-outlined">chat</span>
           <span>Messages</span>
         </Link>
+        <Link href="/profile" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-teal-600 hover:bg-slate-100 transition-all duration-300 ease-in-out">
+          <span className="material-symbols-outlined">account_circle</span>
+          <span>Profile</span>
+        </Link>
       </div>
 
       <div className="mt-auto px-6 py-6">

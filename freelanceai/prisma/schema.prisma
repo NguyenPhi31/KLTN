@@ -20,18 +20,39 @@ model User {
   skills      String? // Comma separated for now
   matchScore  Int?    @default(0)
 
+  // New Profile Fields
+  avatar             String?
+  companyName        String?
+  companyDescription String?
+  companyWebsite     String?
+  location           String?
+  hourlyRate         String?
+  dateOfBirth        DateTime?
+  university         String?
+  cvUrl              String?   // Path to uploaded PDF CV
+  cvText             String?   // Extracted text content for AI analysis
+
   jobs        Job[]
   applications Application[]
+  sentMessages      Message[] @relation("SentMessages")
+  receivedMessages  Message[] @relation("ReceivedMessages")
 }
 
 model Job {
-  id          String   @id @default(uuid())
-  title       String
-  description String
-  budget      String?
-  status      String   @default("OPEN")
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id              String    @id @default(uuid())
+  title           String
+  description     String
+  budget          String?
+  status          String    @default("OPEN")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // Recruitment detail fields
+  requirements    String?   // Comma-separated required skills
+  jobType         String?   // FULL_TIME | PART_TIME | INTERNSHIP | REMOTE
+  experienceLevel String?   // INTERN | FRESHER | JUNIOR | SENIOR
+  jobLocation     String?
+  deadline        DateTime?
 
   clientId    String
   client      User     @relation(fields: [clientId], references: [id])
@@ -49,4 +70,16 @@ model Application {
   freelancer   User    @relation(fields: [freelancerId], references: [id])
   jobId        String
   job          Job     @relation(fields: [jobId], references: [id])
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  content   String
+  createdAt DateTime @default(now())
+  read      Boolean  @default(false)
+
+  senderId   String
+  sender     User   @relation("SentMessages", fields: [senderId], references: [id])
+  receiverId String
+  receiver   User   @relation("ReceivedMessages", fields: [receiverId], references: [id])
 }

@@ -6,16 +6,10 @@ import { NextResponse } from "next/server";
 export async function GET(req: Request) {
   try {
     const jobs = await prisma.job.findMany({
-      orderBy: {
-        createdAt: "desc"
-      },
+      orderBy: { createdAt: "desc" },
       include: {
-        client: {
-          select: {
-            name: true,
-            title: true
-          }
-        }
+        client: { select: { name: true, companyName: true, avatar: true } },
+        _count: { select: { applications: true } }
       }
     });
     return NextResponse.json(jobs);
@@ -27,19 +21,16 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
-  
   if (!session || !session.user || !session.user.email) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
-
-  // Only clients can post jobs
   if ((session.user as any).role !== "CLIENT") {
-      return new NextResponse("Forbidden - Only clients can post jobs", { status: 403 });
+    return new NextResponse("Forbidden - Only clients can post jobs", { status: 403 });
   }
 
   try {
     const body = await req.json();
-    const { title, description, budget } = body;
+    const { title, description, budget, requirements, jobType, experienceLevel, jobLocation, deadline } = body;
 
     if (!title || !description) {
       return new NextResponse("Missing title or description", { status: 400 });
@@ -50,6 +41,11 @@ export async function POST(req: Request) {
         title,
         description,
         budget,
+        requirements,
+        jobType,
+        experienceLevel,
+        jobLocation,
+        deadline: deadline ? new Date(deadline) : null,
         clientId: (session.user as any).id
       }
     });

@@ -14,6 +14,11 @@ export default async function ClientDashboardLayout() {
 
   const clientId = (session.user as any).id;
   
+  const user = await prisma.user.findUnique({
+    where: { id: clientId },
+    select: { avatar: true }
+  });
+
   const jobs = await prisma.job.findMany({
     where: { clientId },
     orderBy: { createdAt: "desc" },
@@ -34,9 +39,18 @@ export default async function ClientDashboardLayout() {
       <main className="ml-64 pt-24 pb-20 px-10 min-h-screen">
         <div className="grid grid-cols-12 gap-10">
           <div className="col-span-12 lg:col-span-3 flex flex-col gap-8">
-            <header>
-              <h1 className="text-3xl font-extrabold tracking-tight text-on-surface mb-1">Chào {session.user.name}</h1>
-              <p className="text-on-surface-variant body-lg">Đây là tổng quan về hoạt động của bạn hôm nay.</p>
+            <header className="flex items-center gap-4">
+              {user?.avatar ? (
+                <img src={user.avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover border-2 border-primary/20 shadow-sm" />
+              ) : (
+                <div className="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center border-2 border-surface-container-high text-on-surface-variant font-bold text-xl shadow-sm">
+                  {session.user.name?.[0]?.toUpperCase()}
+                </div>
+              )}
+              <div>
+                <h1 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-on-surface mb-1">Chào {session.user.name}</h1>
+                <p className="text-on-surface-variant text-sm lg:text-base">Đây là tổng quan về hoạt động của bạn hôm nay.</p>
+              </div>
             </header>
 
             <div className="grid grid-cols-1 gap-4">

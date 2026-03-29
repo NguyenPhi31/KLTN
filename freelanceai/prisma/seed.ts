@@ -6,7 +6,7 @@ import bcrypt from 'bcryptjs'
 const libsql = createClient({
   url: process.env.DATABASE_URL || 'file:./dev.db',
 })
-const adapter = new PrismaLibSql(libsql)
+const adapter = new PrismaLibSql(libsql as any)
 const prisma = new PrismaClient({ adapter })
 
 async function main() {
