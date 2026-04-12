@@ -1,0 +1,6 @@
+{
+    "robotcode.disableExtension": true,
+    "files.watcherExclude": {
+        "**/target": true
+    }
+}

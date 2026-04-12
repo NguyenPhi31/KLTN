@@ -6,7 +6,8 @@
             "request": "launch",
             "name": "Mở ứng dụng trên Chrome (localhost:3000)",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}/freelanceai"
+            "webRoot": "${workspaceFolder}/freelanceai",
+            "preLaunchTask": "Start Next.js Dev Server"
         }
     ]
 }
